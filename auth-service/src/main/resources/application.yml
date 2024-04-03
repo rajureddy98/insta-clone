@@ -4,13 +4,14 @@ spring:
 
   data:
     mongodb:
-      database: instaclone_auth
+      uri: mongodb+srv://mygcp98:ZrOGQlVsHJTqGXHA@cluster0.8aqqmhb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: Cluster0
 
   cloud:
     stream:
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: 34.16.154.69:9092
           configuration:
               key:
                 serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -24,7 +25,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:8761/eureka
+      default-zone: https://verbose-fishstick-grprr7699qv3w7p4-8761.app.github.dev/eureka
       
 security:
   basic:

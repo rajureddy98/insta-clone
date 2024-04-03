@@ -18,6 +18,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SecurityCredentialsConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    @Lazy
     private UserDetailsService userDetailsService;
 
     @Autowired
